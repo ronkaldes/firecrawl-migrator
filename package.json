@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mendable/firecrawl-js": "^1.29.1",
+    "@netlify/plugin-nextjs": "^5.15.3",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
