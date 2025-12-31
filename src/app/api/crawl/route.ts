@@ -158,10 +158,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Convert our schema to JSON schema for Firecrawl
-    const jsonSchema = createJsonSchema(finalSchema)
-    
-
     let crawlResult: {
       success: boolean
       id?: string
@@ -237,8 +233,8 @@ export async function POST(request: NextRequest) {
         }
         
         
-      } catch (error) {
-        
+      } catch {
+
         // Fallback to individual scraping if batch fails
         const fallbackResults: Array<{
           success: boolean

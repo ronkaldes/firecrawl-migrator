@@ -505,16 +505,7 @@ export default function ContentMigratorPage() {
     }
     
     Object.values(tree).forEach(node => updateCounts(node))
-    
-    // Debug: Log the tree structure
-    const totalUrls = urls.length
-    let treeTotal = 0
-    Object.values(tree).forEach(node => {
-      treeTotal += node.count
-    })
-    
-    // URL count validation
-    
+
     return tree
   }
 
@@ -566,10 +557,7 @@ export default function ContentMigratorPage() {
               // Invalid URL
             }
           })
-          
-          // Log URLs that have duplicates
-          const duplicates = Object.entries(urlGroups).filter(([, urls]) => urls.length > 1)
-          
+
           // Filter out duplicate URLs that only differ by query parameters
           const uniqueUrls = Array.from(new Set(
             result.urls.map((url: string) => {
